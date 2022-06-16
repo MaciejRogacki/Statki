@@ -1,5 +1,3 @@
- @import url('http://fonts.cdnfonts.com/css/wonder-boy-in-monster-world');
-
 * {
 	margin: 0;
 	padding: 0;
@@ -8,6 +6,11 @@
 html {
 	width: 100%;
 	height: 100%;
+}
+
+@font-face {
+    font-family: 'Wonder Boy In Monster World';
+    src: url('Wonder_Boy_In_Monster_World.ttf');
 }
 
 body {
