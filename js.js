@@ -72,7 +72,7 @@ function Statek(nazwaStatku){
 
 
 var komunikat = {
-	"powitanie": " Witaj w grze w STATKI! Użyj monu powyżej aby rozpocząć.",
+	"powitanie": " Witaj w grze w STATKI! Użyj menu powyżej aby rozpocząć.",
 	"blad": " UPS coś poszło nie tak! :(.",
 	"gracz1": " Wybierz czy chcesz rozstawić swoją flotę samodzielnie czy ma zrobić to komputer.",
 	"samodzielnie": " Użyj myszy aby rozstawić flotę na lewej dolnej planszy. Możesz obracać statki przyciskami powyżej.",
@@ -101,9 +101,9 @@ var planszaGorna = {
 					$(".tekst").text(komunikat.pudlo("Gracz"));
 					$(this).children().addClass("pudlo");
 				} else $(this).children().addClass("trafienie");
-				$(".planszag").find(".pola").off("mouseenter").off("mouseover").off("mouseleave").off("click");
+				$(".planszag").find(".points").off("mouseenter").off("mouseover").off("mouseleave").off("click");
 				if (flotoKomputera.statki.length == 0) {
- 					$(".planszag").find(".pola").off("mouseenter").off("mouseover").off("mouseleave").off("click");
+ 					$(".planszag").find(".points").off("mouseenter").off("mouseover").off("mouseleave").off("click");
  				} else setTimeout(komputerBOT.select, 800);
 			} 
 		});
@@ -465,9 +465,9 @@ $(document).ready(function() {
 		if (i < 11) {
 			$(".planszag").prepend("<span class='legendaGora'>" + Math.abs(i - 11) + "</span>");
 			$(".planszad").prepend("<span class='legendaGora'>" + Math.abs(i - 11) + "</span>");
-			$(".siatka").append("<li class='pola offset1 " + i + "'><span class='pole'></span></li>");
+			$(".siatka").append("<li class='points offset1 " + i + "'><span class='pole'></span></li>");
 		} else {
-			$(".siatka").append("<li class='pola offset2 " + i + "'><span class='pole'></span></li>");
+			$(".siatka").append("<li class='points offset2 " + i + "'><span class='pole'></span></li>");
 		}
 		if (i == 11) {
 			$(".planszag").prepend("<span class='legendaGora ukryjzero'>" + Math.abs(i - 11) + "</span>");
@@ -561,7 +561,7 @@ function rozstawStatki(Statek, Flota) {
 	$(".poziomo").off("click").on("click", function() {
 		orientacja = "poziomo";
 	});
-	$(".planszad").find(".pola").off("mouseenter").on("mouseenter", function() {
+	$(".planszad").find(".points").off("mouseenter").on("mouseenter", function() {
 		var num = $(this).attr('class').slice(15);
 		//
 		if (orientacja == "poziomo") wyswietlStatekPoziomo(parseInt(num), Statek, this, Flota);
@@ -627,7 +627,7 @@ function ustawStatek(polozenie, Statek, orientacja, podstawowaFlota, typ) {
 			}
 			if (++podstawowaFlota.obecnyStatek == podstawowaFlota.liczbaStatkow) {
 				$(".tekst").text(komunikat.umieszczony("Kuter "));
-				$(".planszad").find(".pola").off("mouseenter");
+				$(".planszad").find(".points").off("mouseenter");
 				setTimeout(utworzFloteKomputera, 100);
 			} else {
 				if (typ == "losowo") rozstawLosowo(podstawowaFlota);
@@ -645,7 +645,7 @@ function ustawStatek(polozenie, Statek, orientacja, podstawowaFlota, typ) {
 			}
 			if (++podstawowaFlota.obecnyStatek == podstawowaFlota.liczbaStatkow) {
 				$(".tekst").text(komunikat.umieszczony("Statki zostały"));
-				$(".planszad").find(".pola").off("mouseenter");
+				$(".planszad").find(".points").off("mouseenter");
 				// clear the call stack
 				setTimeout(utworzFloteKomputera, 100);
 			} else {
@@ -703,9 +703,9 @@ function startGry() {
 
  function podswietlPlansze() {
  	if (flotaGracza.statki.length == 0) {
- 		$(".planszag").find(".pola").off("mouseenter").off("mouseleave").off("click");
+ 		$(".planszag").find(".points").off("mouseenter").off("mouseleave").off("click");
  	} else {
-	 	$(".planszag").find(".pola").off("mouseenter mouseover").on("mouseenter mouseover", function() {
+	 	$(".planszag").find(".points").off("mouseenter mouseover").on("mouseenter mouseover", function() {
 			if(!($(this).hasClass("used"))) planszaGorna.podswietlenie(this);
 		});
 	 }
