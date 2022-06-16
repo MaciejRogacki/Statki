@@ -1,0 +1,337 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-image: url('background1.gif');
+	background-size: cover;
+	font-family: 'Wonder Boy In Monster World', sans-serif;
+                                                
+}
+#tytol {
+	font-size: 80px;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	color: #22FF02;
+	font-weight: 700;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-align: center;	
+	padding-top: 10px;
+}
+
+#oknoGl {
+	width: 700px;
+	height: 800px;
+	margin: auto;
+
+}
+
+
+.plansza {
+	position: absolute;
+	width: 380px; 
+	height: 740px;
+	margin: 25px auto;
+	border: 5px inset #04E00A;
+	border-radius: 0px 40px 0px 40px;
+	background-color: rgb(0, 4, 7);
+}
+
+
+
+.oknoGlowne {
+	position: relative;
+	margin: 25px;
+}
+
+.planszag {
+	width: 330px;
+	height: 330px;
+	background: black;
+	border-left: 1px solid #22FF02;
+	border-bottom: 1px solid #22FF02;
+
+}
+
+.planszad {
+	width: 330px;
+	height: 330px;
+	margin-top: 25px;
+	background: black;
+	border-left: 1px solid #22FF02;
+	border-bottom: 1px solid #22FF02;
+}
+
+.siatka {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background: rgba(0,0,0,0);
+	margin-left: 30px;
+	font-size: 0;
+    list-style-type: disc;
+    
+}
+
+.legendaGora {
+	width: 29px;
+	height: 29px;
+	border-top: 1px solid #22FF02;
+	border-right: 1px solid #22FF02;
+	display: table-cell;
+	vertical-align: middle;
+
+	font-weight: bold;
+	color: #22FF02;
+	text-align: center;
+}
+
+.legendaLewo {
+	position: relative;
+	width: 29px;
+	height: 29px;
+	border-top: 1px solid #22FF02;
+	border-right: 1px solid #22FF02;
+	display: block;
+	line-height: 29px;
+
+	font-weight: bold;
+	color: #22FF02;
+	text-align: center;
+}
+
+.pola {
+	position: relative;
+	width: 29px;
+	height: 29px;
+	border-top: 1px solid #22FF02;
+	border-right: 1px solid #22FF02;
+	display: inline-block;
+
+
+}
+
+.podswietlenie {
+	background: rgba(144,144,144,0.9);
+}
+
+.ukryjzero {
+	color: black;
+}
+
+.pole {
+	position: relative;
+	width: 10px;
+	height: 10px;
+	margin: 9px;
+	border: 1px solid #8DEEEE;
+	border-radius: 50%;
+	display: table;
+    
+}
+
+
+.panel {
+	float: right;
+	width: 275px;
+	height: 740px;
+	margin-top: 25px;
+}
+
+.panelGora {
+	width: 275px;
+	height: 350px;
+	border: 5px inset #04E00A;
+	border-radius: 0px 40px 0px 40px;
+	display: inline-block;
+	background-color: rgb(0, 4, 7);
+	font-size: 15px;
+}
+
+
+
+.oknoKomunikatow {
+	position: relative;
+	width: 275px;
+	height: 350px;
+	margin-top: 20px;
+	background-color: rgb(0, 4, 7);
+	border: 5px inset #04E00A;
+	border-radius: 0px 40px 0px 40px;
+	color: #22FF02;
+	text-align: center;
+	line-height: 200px;
+	line-height: 1.5;
+ 	display: inline-block;
+  	vertical-align: middle;
+	font-size: 20px;
+}
+
+.przycisk2{
+    visibility: hidden;
+}
+.tekst {
+	position: relative;
+	width: 250px;
+	height: 375px;
+	margin: 12px;
+	display: inline-block;
+}
+
+.przyciski {
+	position: relative;
+	display: block;
+	width: 150px;
+	height: 80px;
+
+	margin: 50px auto;
+	border: 2px solid #22FF02;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+
+	text-align: center;
+	line-height: 40px;
+	color: #22FF02;
+	cursor: pointer;
+}
+
+.przyciski:hover {
+	background: rgba(169,169,169,0.3);
+}
+
+.cel {
+	background: rgba(250, 10, 10, 0.7);
+}
+
+.Lotniskowiec {
+	background: rgba(36,36,36);
+}
+
+.Pancernik {
+	background: rgba(94, 55, 55);
+}
+
+.Krążownik {
+	background: rgb(87, 57, 156);
+}
+
+.Niszczyciel {
+	background: rgb(137, 243, 137);
+}
+
+.Kuter {
+	background: rgb(214, 105, 200);
+}
+
+
+.trafienie {
+	position: relative;
+	margin: 1.5px;
+	width: 15px;
+	height: 15px;
+	top: 5px;
+	left: 5px;
+
+	
+	background: rgb(220,10,10);
+	border: 1px solid red;
+	border-radius: 100%;
+	overflow: hidden;
+
+	display: table;
+
+
+}
+
+.pudlo {
+	position: relative;
+	margin: 1.5px;
+	width: 15px;
+	height: 15px;
+	top: 5px;
+	left: 5px;
+
+	background: rgb(60, 137, 201);
+	border: 1px solid white;
+	border-radius: 100%;
+	overflow: hidden;
+
+	display: table;
+
+
+
+
+
+}
+
+@keyframes expand {
+	0% {
+		width: 0px;
+		height: 0px;
+		top: 12.5px;
+		left: 12.5px;
+	}
+	50% {
+		width: 25px;
+		height: 25px;
+		top: 0px;
+		left: 0px;
+	}
+	100% {
+		width: 15px;
+		height: 15px;
+		top: 5px;
+		left: 5px;
+	}
+}
+
+@-webkit-keyframes expand {
+	0% {
+		width: 0px;
+		height: 0px;
+		top: 12.5px;
+		left: 12.5px;
+	}
+	50% {
+		width: 25px;
+		height: 25px;
+		top: 0px;
+		left: 0px;
+	}
+	100% {
+		width: 15px;
+		height: 15px;
+		top: 5px;
+		left: 5px;
+	}
+}
+
+@-moz-keyframes expand {
+	0% {
+		width: 0px;
+		height: 0px;
+		top: 12.5px;
+		left: 12.5px;
+	}
+	50% {
+		width: 25px;
+		height: 25px;
+		top: 0px;
+		left: 0px;
+	}
+	100% {
+		width: 15px;
+		height: 15px;
+		top: 5px;
+		left: 5px;
+	}
+}
